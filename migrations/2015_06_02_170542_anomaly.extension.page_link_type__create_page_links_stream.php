@@ -29,14 +29,16 @@ class AnomalyExtensionPageLinkTypeCreatePageLinksStream extends Migration
      * @var array
      */
     protected $assignments = [
-        'title' => [
+        'title'       => [
             'required'     => true,
             'translatable' => true
         ],
-        'page'  => [
+        'page'        => [
             'required' => true
         ],
-        'description'
+        'description' => [
+            'translatable' => true
+        ]
     ];
 
 }
