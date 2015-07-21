@@ -13,6 +13,7 @@ use Anomaly\Streams\Platform\Model\PageLinkType\PageLinkTypePagesEntryModel;
  */
 class PageLinkTypeModel extends PageLinkTypePagesEntryModel implements LinkEntryInterface
 {
+
     /**
      * Get the URL.
      *
@@ -21,7 +22,7 @@ class PageLinkTypeModel extends PageLinkTypePagesEntryModel implements LinkEntry
     public function getUrl()
     {
         // if this page is not the root page then return it's standard path
-        if($this->page->id != $this->page->first()->id) {
+        if ($this->page->getId() !== $this->page->first()->id) {
             return $this->page->path();
         } else {
             // otherwise we will return / since it is the first page

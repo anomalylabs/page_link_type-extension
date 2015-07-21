@@ -1,29 +1,21 @@
 {
     "name": "anomaly/page_link_type-extension",
     "type": "streams-addon",
-    "description": "A page link type extension.",
-    "version": "1.0.0",
+    "description": "A page link type for the Navigation module.",
     "keywords": [
-        "streams-addon",
-        "extension",
-        "page link tupe",
-        "pyrocms",
-        "laravel"
+        "streams extension",
+        "streams addon",
+        "extension"
     ],
-    "home": "http://anomaly.is/",
+    "homepage": "http://anomaly.is/",
+    "version": "1.0.0",
     "license": "MIT",
     "authors": [
         {
             "name": "AnomalyLabs, Inc.",
             "email": "hello@anomaly.is",
-            "homepartial": "http://anomaly.is/",
+            "homepage": "http://anomaly.is/",
             "role": "Owner"
-        },
-        {
-            "name": "Thunderware",
-            "email": "brennon.loveless@gmail.com",
-            "homepartial": "http://www.thunderware.net/",
-            "role": "Developer"
         }
     ],
     "support": {
@@ -36,8 +28,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0.x-dev"
+            "dev-1.0/master": "1.0.x-dev"
         }
-    },
-    "minimum-stability": "dev"
+    }
 }

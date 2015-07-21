@@ -4,14 +4,15 @@ return [
     'title'       => [
         'name'         => 'Title',
         'instructions' => 'Enter the link title.',
-        'placeholder'  => 'Company'
+        'placeholder'  => 'About Us'
     ],
-    'page'         => [
+    'page'        => [
         'name'         => 'Page',
+        'instructions' => 'Choose the page this link should point to.',
+        'placeholder'  => 'Choose a page...'
     ],
     'description' => [
         'name'         => 'Description',
-        'instructions' => 'The optional description could be used for extra link text.',
-        'placeholder'  => 'If you wish...'
+        'instructions' => 'The description can be used for extra link text.'
     ]
 ];

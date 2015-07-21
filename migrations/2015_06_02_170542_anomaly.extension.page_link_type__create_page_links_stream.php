@@ -1,8 +1,14 @@
 <?php
 
-use Illuminate\Database\Schema\Blueprint;
 use Anomaly\Streams\Platform\Database\Migration\Migration;
 
+/**
+ * Class AnomalyExtensionPageLinkTypeCreatePageLinksStream
+ *
+ * @link          http://anomaly.is/streams-platform
+ * @author        AnomalyLabs, Inc. <hello@anomaly.is>
+ * @author        Ryan Thompson <ryan@anomaly.is>
+ */
 class AnomalyExtensionPageLinkTypeCreatePageLinksStream extends Migration
 {
 
@@ -14,7 +20,7 @@ class AnomalyExtensionPageLinkTypeCreatePageLinksStream extends Migration
     protected $stream = [
         'slug'         => 'pages',
         'title_column' => 'title',
-        'locked'       => true
+        'translatable' => true
     ];
 
     /**
@@ -24,9 +30,10 @@ class AnomalyExtensionPageLinkTypeCreatePageLinksStream extends Migration
      */
     protected $assignments = [
         'title' => [
-            'required' => true
+            'required'     => true,
+            'translatable' => true
         ],
-        'page'   => [
+        'page'  => [
             'required' => true
         ],
         'description'

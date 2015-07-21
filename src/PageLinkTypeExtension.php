@@ -14,7 +14,7 @@ class PageLinkTypeExtension extends LinkType
 {
 
     /**
-     * This extension provides the URL
+     * This extension provides the page
      * link type for the Navigation module.
      *
      * @var string

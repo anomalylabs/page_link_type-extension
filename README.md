@@ -1,3 +1,3 @@
-# Page Link Type
+# Page Link Type Extension
 
-A Page link type.
+A page link type for the Navigation module.
