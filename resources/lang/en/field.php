@@ -3,8 +3,7 @@
 return [
     'title'       => [
         'name'         => 'Title',
-        'instructions' => 'Enter the link title.',
-        'placeholder'  => 'About Us'
+        'instructions' => 'Enter the link title.'
     ],
     'page'        => [
         'name'         => 'Page',
