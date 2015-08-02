@@ -21,6 +21,10 @@ class PageLinkTypeModel extends PageLinkTypePagesEntryModel implements LinkEntry
      */
     public function getUrl()
     {
+        if (!$this->page) {
+            return null;
+        }
+
         // if this page is not the root page then return it's standard path
         if ($this->page->getId() !== $this->page->first()->id) {
             return $this->page->staticPrefix();
