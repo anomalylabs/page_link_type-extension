@@ -1,6 +1,6 @@
 <?php namespace Anomaly\PageLinkTypeExtension;
 
-use Anomaly\NavigationModule\Link\LinkType;
+use Anomaly\Streams\Platform\Addon\Extension\Extension;
 
 /**
  * Class PageLinkTypeExtension
@@ -10,7 +10,7 @@ use Anomaly\NavigationModule\Link\LinkType;
  * @author        Brennon Loveless <brennon.loveless@gmail.com>
  * @package       Anomaly\PageLinkTypeExtension
  */
-class PageLinkTypeExtension extends LinkType
+class PageLinkTypeExtension extends Extension
 {
 
     /**
