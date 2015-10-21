@@ -27,7 +27,7 @@ class PageLinkTypeModel extends PageLinkTypePagesEntryModel implements LinkEntry
 
         // if this page is not the root page then return it's standard path
         if (!$this->page->isHome()) {
-            return $this->page->staticPrefix();
+            return $this->page->getPath();
         } else {
             // otherwise we will return / since it is the first page
             return '/';
