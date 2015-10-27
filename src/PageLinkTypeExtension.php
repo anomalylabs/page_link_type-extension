@@ -1,6 +1,10 @@
 <?php namespace Anomaly\PageLinkTypeExtension;
 
-use Anomaly\Streams\Platform\Addon\Extension\Extension;
+use Anomaly\NavigationModule\Link\Contract\LinkInterface;
+use Anomaly\NavigationModule\Link\Type\Contract\LinkTypeInterface;
+use Anomaly\NavigationModule\Link\Type\LinkTypeExtension;
+use Anomaly\PageLinkTypeExtension\Form\PageLinkTypeFormBuilder;
+use Anomaly\Streams\Platform\Ui\Form\FormBuilder;
 
 /**
  * Class PageLinkTypeExtension
@@ -10,7 +14,7 @@ use Anomaly\Streams\Platform\Addon\Extension\Extension;
  * @author        Brennon Loveless <brennon.loveless@gmail.com>
  * @package       Anomaly\PageLinkTypeExtension
  */
-class PageLinkTypeExtension extends Extension
+class PageLinkTypeExtension extends LinkTypeExtension implements LinkTypeInterface
 {
 
     /**
@@ -21,4 +25,36 @@ class PageLinkTypeExtension extends Extension
      */
     protected $provides = 'anomaly.module.navigation::link_type.page';
 
+    /**
+     * Return the entry URL.
+     *
+     * @param LinkInterface $link
+     * @return string
+     */
+    public function url(LinkInterface $link)
+    {
+        return url($link->getEntry()->page->getPath());
+    }
+
+    /**
+     * Return the entry title.
+     *
+     * @param LinkInterface $link
+     * @return string
+     */
+    public function title(LinkInterface $link)
+    {
+        return $link->getEntry()->getTitle();
+    }
+
+    /**
+     * Return the form builder for
+     * the link type entry.
+     *
+     * @return FormBuilder
+     */
+    public function builder()
+    {
+        return app(PageLinkTypeFormBuilder::class);
+    }
 }

@@ -1,8 +1,15 @@
 <?php
 
-use Illuminate\Database\Schema\Blueprint;
 use Anomaly\Streams\Platform\Database\Migration\Migration;
+use Illuminate\Database\Schema\Blueprint;
 
+/**
+ * Class AnomalyExtensionPageLinkTypeCreatePageLinkTypeFields
+ *
+ * @link          http://anomaly.is/streams-platform
+ * @author        AnomalyLabs, Inc. <hello@anomaly.is>
+ * @author        Ryan Thompson <ryan@anomaly.is>
+ */
 class AnomalyExtensionPageLinkTypeCreatePageLinkTypeFields extends Migration
 {
 
