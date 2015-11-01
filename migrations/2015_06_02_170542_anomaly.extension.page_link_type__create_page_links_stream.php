@@ -30,7 +30,6 @@ class AnomalyExtensionPageLinkTypeCreatePageLinksStream extends Migration
      */
     protected $assignments = [
         'title'       => [
-            'required'     => true,
             'translatable' => true
         ],
         'page'        => [

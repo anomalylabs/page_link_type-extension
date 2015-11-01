@@ -44,7 +44,7 @@ class PageLinkTypeExtension extends LinkTypeExtension implements LinkTypeInterfa
      */
     public function title(LinkInterface $link)
     {
-        return $link->getEntry()->getTitle();
+        return $link->getEntry()->getTitle() ?: $link->getEntry()->page->getTitle();
     }
 
     /**
