@@ -33,7 +33,14 @@ class PageLinkTypeExtension extends LinkTypeExtension implements LinkTypeInterfa
      */
     public function url(LinkInterface $link)
     {
-        return url($link->getEntry()->page->getPath());
+        /* @var PageLinkTypeModel $type */
+        $type = $link->getType();
+
+        if (!$page = $type->getPage()) {
+            return url('#');
+        }
+
+        return url($page->getPath());
     }
 
     /**
@@ -44,7 +51,14 @@ class PageLinkTypeExtension extends LinkTypeExtension implements LinkTypeInterfa
      */
     public function title(LinkInterface $link)
     {
-        return $link->getEntry()->getTitle() ?: $link->getEntry()->page->getTitle();
+        /* @var PageLinkTypeModel $type */
+        $type = $link->getType();
+
+        if (!$page = $type->getPage()) {
+            return 'Deleted '. $type->page_id;
+        }
+
+        return $type->getTitle() ?: $page->getTitle();
     }
 
     /**

@@ -13,4 +13,8 @@ use Anomaly\Streams\Platform\Model\PageLinkType\PageLinkTypePagesEntryModel;
 class PageLinkTypeModel extends PageLinkTypePagesEntryModel
 {
 
+    public function getPage()
+    {
+        return $this->page;
+    }
 }
