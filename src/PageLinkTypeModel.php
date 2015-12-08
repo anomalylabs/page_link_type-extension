@@ -1,5 +1,6 @@
 <?php namespace Anomaly\PageLinkTypeExtension;
 
+use Anomaly\PagesModule\Page\Contract\PageInterface;
 use Anomaly\Streams\Platform\Model\PageLinkType\PageLinkTypePagesEntryModel;
 
 /**
@@ -13,6 +14,11 @@ use Anomaly\Streams\Platform\Model\PageLinkType\PageLinkTypePagesEntryModel;
 class PageLinkTypeModel extends PageLinkTypePagesEntryModel
 {
 
+    /**
+     * Get the page.
+     *
+     * @return PageInterface
+     */
     public function getPage()
     {
         return $this->page;
