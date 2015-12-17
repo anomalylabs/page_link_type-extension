@@ -15,6 +15,16 @@ class PageLinkTypeModel extends PageLinkTypePagesEntryModel
 {
 
     /**
+     * Eager load these relations.
+     *
+     * @var array
+     */
+    protected $with = [
+        'page',
+        'translations'
+    ];
+
+    /**
      * Get the page.
      *
      * @return PageInterface
