@@ -62,17 +62,17 @@ class PageLinkTypeExtension extends LinkTypeExtension implements LinkTypeInterfa
     }
 
     /**
-     * Return if the link is broken or not.
+     * Return if the link exists or not.
      *
      * @param LinkInterface $link
      * @return bool
      */
-    public function broken(LinkInterface $link)
+    public function exists(LinkInterface $link)
     {
         /* @var PageLinkTypeModel $entry */
         $entry = $link->getEntry();
 
-        return !$entry->getPage();
+        return (bool)$entry->getPage();
     }
 
     /**
