@@ -1,5 +1,6 @@
 <?php namespace Anomaly\PageLinkTypeExtension;
 
+use Anomaly\PageLinkTypeExtension\Contract\PageLinkTypeInterface;
 use Anomaly\PagesModule\Page\Contract\PageInterface;
 use Anomaly\Streams\Platform\Model\PageLinkType\PageLinkTypePagesEntryModel;
 
@@ -11,7 +12,7 @@ use Anomaly\Streams\Platform\Model\PageLinkType\PageLinkTypePagesEntryModel;
  * @author        Brennon Loveless <brennon.loveless@gmail.com>
  * @package       Anomaly\UrlLinkTypeExtension
  */
-class PageLinkTypeModel extends PageLinkTypePagesEntryModel
+class PageLinkTypeModel extends PageLinkTypePagesEntryModel implements PageLinkTypeInterface
 {
 
     /**

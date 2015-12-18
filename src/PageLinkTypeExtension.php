@@ -37,7 +37,7 @@ class PageLinkTypeExtension extends LinkTypeExtension implements LinkTypeInterfa
         $entry = $link->getEntry();
 
         if (!$page = $entry->getPage()) {
-            return url('#');
+            return url('');
         }
 
         return url($page->getPath());
@@ -55,10 +55,24 @@ class PageLinkTypeExtension extends LinkTypeExtension implements LinkTypeInterfa
         $entry = $link->getEntry();
 
         if (!$page = $entry->getPage()) {
-            return 'Deleted ' . $entry->page_id;
+            return '[Broken Link]';
         }
 
         return $entry->getTitle() ?: $page->getTitle();
+    }
+
+    /**
+     * Return if the link is broken or not.
+     *
+     * @param LinkInterface $link
+     * @return bool
+     */
+    public function broken(LinkInterface $link)
+    {
+        /* @var PageLinkTypeModel $entry */
+        $entry = $link->getEntry();
+
+        return !$entry->getPage();
     }
 
     /**
