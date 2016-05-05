@@ -1,7 +1,6 @@
 <?php
 
 use Anomaly\Streams\Platform\Database\Migration\Migration;
-use Illuminate\Database\Schema\Blueprint;
 
 /**
  * Class AnomalyExtensionPageLinkTypeCreatePageLinkTypeFields
@@ -23,6 +22,7 @@ class AnomalyExtensionPageLinkTypeCreatePageLinkTypeFields extends Migration
         'page'        => [
             'type'   => 'anomaly.field_type.relationship',
             'config' => [
+                'mode'    => 'lookup',
                 'related' => 'Anomaly\PagesModule\Page\PageModel'
             ]
         ],
