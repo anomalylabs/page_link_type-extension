@@ -4,6 +4,7 @@ use Anomaly\NavigationModule\Link\Contract\LinkInterface;
 use Anomaly\NavigationModule\Link\Type\Contract\LinkTypeInterface;
 use Anomaly\NavigationModule\Link\Type\LinkTypeExtension;
 use Anomaly\PageLinkTypeExtension\Form\PageLinkTypeFormBuilder;
+use Anomaly\PagesModule\Page\Contract\PageInterface;
 use Anomaly\Streams\Platform\Ui\Form\FormBuilder;
 
 /**
@@ -73,6 +74,22 @@ class PageLinkTypeExtension extends LinkTypeExtension implements LinkTypeInterfa
         $entry = $link->getEntry();
 
         return (bool)$entry->getPage();
+    }
+
+    /**
+     * Return if the link is enabled or not.
+     *
+     * @param LinkInterface $link
+     * @return bool
+     */
+    public function enabled(LinkInterface $link)
+    {
+        /* @var PageLinkTypeModel $entry */
+        /* @var PageInterface $page */
+        $entry = $link->getEntry();
+        $page  = $entry->getPage();
+
+        return $page->isEnabled();
     }
 
     /**
