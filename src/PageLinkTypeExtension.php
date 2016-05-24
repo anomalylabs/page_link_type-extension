@@ -89,7 +89,11 @@ class PageLinkTypeExtension extends LinkTypeExtension implements LinkTypeInterfa
         $entry = $link->getEntry();
         $page  = $entry->getPage();
 
-        return $page->isEnabled();
+        if($page) {
+            return $page->isEnabled();
+        }
+        
+        return false;
     }
 
     /**
