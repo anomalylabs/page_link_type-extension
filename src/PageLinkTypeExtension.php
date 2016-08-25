@@ -13,7 +13,6 @@ use Anomaly\Streams\Platform\Ui\Form\FormBuilder;
  * @link          http://www.thunderware.net
  * @author        Thunderware <brennon.loveless@gmail.com>
  * @author        Brennon Loveless <brennon.loveless@gmail.com>
- * @package       Anomaly\PageLinkTypeExtension
  */
 class PageLinkTypeExtension extends LinkTypeExtension implements LinkTypeInterface
 {
@@ -29,7 +28,7 @@ class PageLinkTypeExtension extends LinkTypeExtension implements LinkTypeInterfa
     /**
      * Return the entry URL.
      *
-     * @param LinkInterface $link
+     * @param  LinkInterface $link
      * @return string
      */
     public function url(LinkInterface $link)
@@ -47,7 +46,7 @@ class PageLinkTypeExtension extends LinkTypeExtension implements LinkTypeInterfa
     /**
      * Return the entry title.
      *
-     * @param LinkInterface $link
+     * @param  LinkInterface $link
      * @return string
      */
     public function title(LinkInterface $link)
@@ -65,7 +64,7 @@ class PageLinkTypeExtension extends LinkTypeExtension implements LinkTypeInterfa
     /**
      * Return if the link exists or not.
      *
-     * @param LinkInterface $link
+     * @param  LinkInterface $link
      * @return bool
      */
     public function exists(LinkInterface $link)
@@ -79,7 +78,7 @@ class PageLinkTypeExtension extends LinkTypeExtension implements LinkTypeInterfa
     /**
      * Return if the link is enabled or not.
      *
-     * @param LinkInterface $link
+     * @param  LinkInterface $link
      * @return bool
      */
     public function enabled(LinkInterface $link)

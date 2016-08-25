@@ -23,10 +23,10 @@ class AnomalyExtensionPageLinkTypeCreatePageLinkTypeFields extends Migration
             'type'   => 'anomaly.field_type.relationship',
             'config' => [
                 'mode'    => 'lookup',
-                'related' => 'Anomaly\PagesModule\Page\PageModel'
-            ]
+                'related' => 'Anomaly\PagesModule\Page\PageModel',
+            ],
         ],
-        'description' => 'anomaly.field_type.textarea'
+        'description' => 'anomaly.field_type.textarea',
     ];
 
 }

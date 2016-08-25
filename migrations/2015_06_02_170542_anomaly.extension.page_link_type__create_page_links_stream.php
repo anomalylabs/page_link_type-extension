@@ -20,7 +20,7 @@ class AnomalyExtensionPageLinkTypeCreatePageLinksStream extends Migration
     protected $stream = [
         'slug'         => 'pages',
         'title_column' => 'title',
-        'translatable' => true
+        'translatable' => true,
     ];
 
     /**
@@ -30,14 +30,14 @@ class AnomalyExtensionPageLinkTypeCreatePageLinksStream extends Migration
      */
     protected $assignments = [
         'title'       => [
-            'translatable' => true
+            'translatable' => true,
         ],
         'page'        => [
-            'required' => true
+            'required' => true,
         ],
         'description' => [
-            'translatable' => true
-        ]
+            'translatable' => true,
+        ],
     ];
 
 }

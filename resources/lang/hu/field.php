@@ -2,16 +2,16 @@
 
 return [
     'title' => [
-        'name' => 'Cím',
+        'name'     => 'Cím',
     'instructions' => 'Add meg a link címét',
     ],
     'page' => [
-        'name' => 'Oldal',
+        'name'     => 'Oldal',
     'instructions' => 'Válaszd ki, hogy melyik oldalra mutasson a link.',
-    'placeholder' => 'Válassz oldalt...',
+    'placeholder'  => 'Válassz oldalt...',
     ],
     'description' => [
-        'name' => 'Leírás',
+        'name'     => 'Leírás',
     'instructions' => 'A leírást extra szövegként lehet használni a linkhez.',
     ],
 ];

@@ -8,7 +8,6 @@ use Anomaly\Streams\Platform\Ui\Form\FormBuilder;
  * @link          http://www.thunderware.net
  * @author        Thunderware <brennon.loveless@gmail.com>
  * @author        Brennon Loveless <brennon.loveless@gmail.com>
- * @package       Anomaly\PageLinkTypeExtension
  */
 class PageLinkTypeFormBuilder extends FormBuilder
 {

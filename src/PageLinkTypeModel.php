@@ -10,7 +10,6 @@ use Anomaly\Streams\Platform\Model\PageLinkType\PageLinkTypePagesEntryModel;
  * @link          http://www.thunderware.net
  * @author        Thunderware <brennon.loveless@gmail.com>
  * @author        Brennon Loveless <brennon.loveless@gmail.com>
- * @package       Anomaly\UrlLinkTypeExtension
  */
 class PageLinkTypeModel extends PageLinkTypePagesEntryModel implements PageLinkTypeInterface
 {
@@ -22,7 +21,7 @@ class PageLinkTypeModel extends PageLinkTypePagesEntryModel implements PageLinkT
      */
     protected $with = [
         'page',
-        'translations'
+        'translations',
     ];
 
     /**
