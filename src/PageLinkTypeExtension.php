@@ -84,15 +84,16 @@ class PageLinkTypeExtension extends LinkTypeExtension implements LinkTypeInterfa
     public function enabled(LinkInterface $link)
     {
         /* @var PageLinkTypeModel $entry */
-        /* @var PageInterface $page */
-        $entry = $link->getEntry();
-        $page  = $entry->getPage();
-
-        if($page) {
-            return $page->isEnabled();
+        if (!$entry = $link->getEntry()) {
+            return false;
         }
-        
-        return false;
+
+        /* @var PageInterface $page */
+        if (!$page = $entry->getPage()) {
+            return false;
+        }
+
+        return $page->isEnabled();
     }
 
     /**
