@@ -39,5 +39,4 @@ class AnomalyExtensionPageLinkTypeCreatePageLinksStream extends Migration
             'translatable' => true,
         ],
     ];
-
 }

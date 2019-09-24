@@ -28,5 +28,4 @@ class AnomalyExtensionPageLinkTypeCreatePageLinkTypeFields extends Migration
         ],
         'description' => 'anomaly.field_type.textarea',
     ];
-
 }
