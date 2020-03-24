@@ -74,7 +74,9 @@ class PageLinkTypeExtension extends LinkTypeExtension implements LinkTypeInterfa
     public function exists(LinkInterface $link)
     {
         /* @var PageLinkTypeModel $entry */
-        $entry = $link->getEntry();
+        if (!$entry = $link->getEntry()) {
+            return false;
+        }
 
         return (bool)$entry->getPage();
     }
