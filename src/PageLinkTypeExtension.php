@@ -34,7 +34,9 @@ class PageLinkTypeExtension extends LinkTypeExtension implements LinkTypeInterfa
     public function url(LinkInterface $link)
     {
         /* @var PageLinkTypeModel $entry */
-        $entry = $link->getEntry();
+        if (!$entry = $link->getEntry()) {
+            return url('');
+        }
 
         if (!$page = $entry->getPage()) {
             return url('');
