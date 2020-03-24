@@ -54,7 +54,9 @@ class PageLinkTypeExtension extends LinkTypeExtension implements LinkTypeInterfa
     public function title(LinkInterface $link)
     {
         /* @var PageLinkTypeModel $entry */
-        $entry = $link->getEntry();
+        if (!$entry = $link->getEntry()) {
+            return '[Broken Link]';
+        }
 
         if (!$page = $entry->getPage()) {
             return '[Broken Link]';
